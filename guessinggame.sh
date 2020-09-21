@@ -10,8 +10,14 @@ real_num_files=$(ls -p | grep -v / | wc -l)
 guessed=false
 while [[ !guessed ]]
 do
-	if [[ $real_num_files -eq $(readGuess) ]]
+	guess=$(readGuess)
+	if [[ $real_num_files -gt $guess ]]
 	then
+		echo "Too low"
+	elif [[ $real_num_files -lt $guess  ]]
+	then
+		echo "Too high"
+	else
 		break
 	fi
 done
