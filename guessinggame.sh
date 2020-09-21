@@ -22,6 +22,3 @@ do
 	fi
 done
 echo "Congrats!"
-# line #19
-# line #20
-# line 21, are you happy now?
